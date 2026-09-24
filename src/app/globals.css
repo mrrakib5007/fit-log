@@ -1,7 +1,16 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+  --font-sans: var(--font-inter);
+  --font-oswald: var(--font-oswald);
+}
+
 :root {
-  --primary: #ffffff;
-  --secondary: #171717;
+  --primary: #ccff00;
+  --secondary: #000000;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
 }
