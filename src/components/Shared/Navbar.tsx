@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="border-b border-gray-800 bg-black sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <Image src="/assets/logo.png" alt="Logo" width={35} height={35} />
           <span className="text-2xl font-oswald font-bold text-white uppercase tracking-wider">
             FitLog
