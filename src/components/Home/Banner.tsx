@@ -32,6 +32,7 @@ const Banner = () => {
               alt="Workout Machine"
               fill
               priority
+              sizes="(max-width: 640px) 256px, (max-width: 768px) 320px, (max-width: 1024px) 384px, 420px"
               className="object-contain"
             />
           </div>
