@@ -1,4 +1,4 @@
-import React from 'react'
+
 import WorkoutCard from '../Cards/WorkoutCard';
 import { IWorkout } from '@/Type/workout';
 

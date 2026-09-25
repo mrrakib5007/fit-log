@@ -10,15 +10,15 @@ const WorkoutCard = ({ workout }: { workout: IWorkout }) => {
   return (
     <Link
       href={`/workouts/${id}`}
-      className="group overflow-hidden rounded-2xl border border-white/10 bg-[#15171c] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+      className="group overflow-hidden rounded-md border border-white/10 bg-[#15171c] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-xl lg:rounded-xl"
     >
-      <div className="relative aspect-4/3 w-full overflow-hidden">
+      <div className="relative aspect-video w-full overflow-hidden">
         <Image
           src={image}
           alt={name}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover"
         />
 
         <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
@@ -36,7 +36,7 @@ const WorkoutCard = ({ workout }: { workout: IWorkout }) => {
           ))}
         </div>
 
-        <h2 className="mb-1 text-xl font-extrabold uppercase tracking-wide text-white">
+        <h2 className="mb-1 font-oswald text-xl font-extrabold uppercase tracking-wide text-white">
           {name}
         </h2>
 
