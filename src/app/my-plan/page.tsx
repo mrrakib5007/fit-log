@@ -1,5 +1,6 @@
 'use client';
 
+import Loading from "@/components/Loading/Loading";
 import SavedForLater from "@/components/MyPlan/SavedForLater";
 import TodayPlans from "@/components/MyPlan/TodayPlans";
 import { WorkoutContext } from "@/context/WorkoutContext";
@@ -22,8 +23,10 @@ const sortWorkouts = (workouts: IWorkout[], sortBy: SortOption) => {
 const MyPlanPage = () => {
   const [activeTab, setActiveTab] = useState<"todaysPlan" | "saved">("todaysPlan");
   const [sortBy, setSortBy] = useState<SortOption>("duration");
+
   const context = useContext(WorkoutContext);
 
+  const isLoading = !context || context.isLoading;
   const todayPlan = context?.todayPlan ?? EMPTY_WORKOUTS;
   const saveForLater = context?.saveForLater ?? EMPTY_WORKOUTS;
 
@@ -113,7 +116,9 @@ const MyPlanPage = () => {
         </div>
 
         <div className="mt-8 rounded-2xl">
-          {activeTab === "todaysPlan" ? (
+          {isLoading ? (
+            <Loading />
+          ) : activeTab === "todaysPlan" ? (
             <TodayPlans workouts={sortedTodayPlan} />
           ) : (
             <SavedForLater workouts={sortedSaveForLater} />
