@@ -19,9 +19,9 @@ const Banner = () => {
           </p>
 
           <div className="pt-2 w-full flex justify-center lg:justify-start">
-            <button className="bg-(--primary) text-black font-extrabold text-xs sm:text-sm tracking-wide uppercase py-3.5 px-6 rounded-md hover:brightness-110 active:scale-95 transition-all cursor-pointer">
+            <a href="#library" className="bg-(--primary) text-black font-extrabold text-xs sm:text-sm tracking-wide uppercase py-3.5 px-6 rounded-md hover:brightness-110 active:scale-95 transition-all cursor-pointer">
               BROWSE WORKOUTS
-            </button>
+            </a>
           </div>
         </div>
 

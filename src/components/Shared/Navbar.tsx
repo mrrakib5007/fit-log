@@ -12,7 +12,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Workouts", href: "/" },
-    { name: "My Plan", href: "/myplan" },
+    { name: "My Plan", href: "/my-plan" },
   ];
 
   return (
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="/myplan"
+            href="/my-plan"
             className="flex items-center gap-2 text-sm text-gray-300 hover:text-white py-1.5 px-3 rounded-lg bg-transparent hover:bg-(--primary)/10 transition-colors"
           >
             <span>Plan</span>
@@ -55,7 +55,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link
-            href="/myplan"
+            href="/my-plan"
             className="flex items-center gap-2 text-sm text-gray-300 hover:text-white py-1.5 px-3 rounded-lg bg-transparent hover:bg-(--primary)/10 transition-colors"
           >
             <span>Saved</span>
@@ -125,7 +125,7 @@ const Navbar = () => {
 
         <div className="pt-6 border-t border-gray-800 flex flex-col gap-4">
           <Link
-            href="/myplan"
+            href="/my-plan"
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-between text-base text-gray-300 hover:text-white p-2 rounded-lg bg-transparent hover:bg-(--primary)/10 transition-colors"
           >
@@ -135,7 +135,7 @@ const Navbar = () => {
             </span>
           </Link>
           <Link
-            href="/myplan"
+            href="/my-plan"
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-between text-base text-gray-300 hover:text-white p-2 rounded-lg bg-transparent hover:bg-(--primary)/10 transition-colors"
           >
