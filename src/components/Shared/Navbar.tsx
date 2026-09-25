@@ -1,14 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { WorkoutContext } from "@/context/WorkoutContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const context = useContext(WorkoutContext);
+
+  const todayPlan = context?.todayPlan ?? [];
+  const saveForLater = context?.saveForLater ?? [];
 
   const navLinks = [
     { name: "Workouts", href: "/" },
@@ -51,7 +56,7 @@ const Navbar = () => {
           >
             <span>Plan</span>
             <span className="bg-(--primary) border border-(--primary) text-black font-semibold w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">
-              0
+              {todayPlan.length}
             </span>
           </Link>
           <Link
@@ -60,7 +65,7 @@ const Navbar = () => {
           >
             <span>Saved</span>
             <span className="bg-transparent border border-gray-700 text-white font-semibold w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">
-              0
+              {saveForLater.length}
             </span>
           </Link>
         </div>
@@ -131,7 +136,7 @@ const Navbar = () => {
           >
             <span>Plan</span>
             <span className="bg-(--primary) border border-(--primary) text-black font-semibold w-7 h-7 rounded-full inline-flex items-center justify-center text-xs">
-              0
+              {todayPlan.length}
             </span>
           </Link>
           <Link
@@ -141,7 +146,7 @@ const Navbar = () => {
           >
             <span>Saved</span>
             <span className="bg-transparent border border-gray-700 text-white font-semibold w-7 h-7 rounded-full inline-flex items-center justify-center text-xs">
-              0
+              {saveForLater.length}
             </span>
           </Link>
         </div>

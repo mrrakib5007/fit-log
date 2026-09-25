@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { FiBookmark } from "react-icons/fi";
-import { FaCalendarAlt } from "react-icons/fa";
 import { IWorkout } from "@/Type/workout";
+import WorkoutButtons from "@/components/Workout/WorkoutButtons";
 
 interface DetailsPageProps {
   params: Promise<{ workoutID: string }>;
@@ -91,16 +90,7 @@ const WorkoutDetailsPage = async ({ params }: DetailsPageProps) => {
               </div>
             </div>
 
-            <div className="mt-5 flex flex-wrap items-center gap-4">
-              <button type="button" className="flex items-center gap-2 rounded-xl bg-(--primary) px-6 py-3.5 text-sm font-bold text-black shadow-lg transition-transform hover:scale-[1.02] active:scale-95">
-                <FaCalendarAlt className="text-base stroke-[2.5]" />
-                <span>Add to today&apos;s plan</span>
-              </button>
-              <button type="button" className="flex items-center gap-2 rounded-xl border border-white/15 bg-transparent px-6 py-3.5 text-sm font-semibold text-gray-300 transition-colors hover:border-white/30 hover:bg-white/5">
-                <FiBookmark className="text-base stroke-2" />
-                <span>Save for later</span>
-              </button>
-            </div>
+            <WorkoutButtons workout={workout} />
           </div>
         </div>
       </div>

@@ -11,7 +11,6 @@ const fetchWorkouts = async () => {
 const TheLibrarySection = async () => {
     const workouts: IWorkout[] = await fetchWorkouts();
 
-    console.log(workouts);
   return (
     <div className='container mx-auto px-4 my-10' id='library'>
         <div>
